@@ -1,0 +1,19 @@
+@mixin addFontFamily($familyName: '', $fileName: '', $formats: null, $fontWeight: 400, $fontStyle: 'normal')
+	$allUrl: ()
+	$i: 1
+	@each $format in $formats
+		@if length($formats) != $i
+			$allUrl: append($allUrl, #{'url("../font/#{$fileName}.#{$format}") format("#{$format}"),'})
+		@if length($formats) == $i
+			$allUrl: append($allUrl, #{'url("../font/#{$fileName}.#{$format}") format("#{$format}")'})
+		$i: $i + 1
+	@font-face
+		font-family: $familyName
+		src: $allUrl
+		font-weight: $fontWeight
+		font-style: $fontStyle
+
+@include addFontFamily('OpenSans', $fileName: 'OpenSans-Bold', $formats: ('woff', 'woff2'), $fontWeight: 700)
+@include addFontFamily('OpenSans', $fileName: 'OpenSans-BoldItalic', $formats: ('woff', 'woff2'), $fontWeight: 700, $fontStyle: italic)
+@include addFontFamily('OpenSans', $fileName: 'OpenSans-Regular', $formats: ('woff', 'woff2'), $fontWeight: 400, $fontStyle: normal)
+@include addFontFamily('OpenSans', $fileName: 'OpenSans-Italic', $formats: ('woff', 'woff2'), $fontWeight: 400, $fontStyle: italic)
