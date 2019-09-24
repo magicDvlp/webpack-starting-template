@@ -1,4 +1,4 @@
-# AleTemplate
+# Webpack-starting-template
 
 Simple starter template for webpack web development
 
