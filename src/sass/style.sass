@@ -1,5 +1,6 @@
 @import "var.sass"
 @import "fonts.sass"
+@import "libs.sass"
 
 *
 	padding: 0
@@ -12,14 +13,14 @@ ul,ol
 
 a
 	text-decoration: none
-	color: $textColor
+	color: $primary
 	&:focus
 		text-decoration: none
-		color: $primaryColor
+		color: $primary
 	&:hover, &:active
 		text-decoration: none
-		color: $primaryColorDarken
-a[href^="mailto:"], a[href^="tel:"]
+		color: $primaryDarken
+a[href^="tel:"]
 	color: $textColor!important
 
 input, textarea
@@ -63,9 +64,9 @@ h1
 	margin-bottom: 0.67em
 
 body
-	font-size: 1.6rem
-	font-family: OpenSans
-	background: #fff
+	font-size: $fontSize
+	font-family: $fontFamily
+	background: $bodyBackground
 	-webkit-text-size-adjust: 100%
 	min-height: 100vh
 	color: $textColor
@@ -77,20 +78,23 @@ body
 	flex-direction: column
 	line-height: normal
 
+iframe
+		max-width: 100%
+
 img
 	display: block
 
 .text-field
 	color: $textColor
 	font-size: 10px
-	>*
-		font-size: 1.6em
 	ul,ol,li,img,p
 		margin-bottom: 1.25em
 	p
+		font-size: 1.6em
 		&:last-child
 			margin-bottom: 0
 	ul
+		font-size: 1.6em
 		&:last-child
 			margin-bottom: 0
 		li
@@ -101,13 +105,14 @@ img
 				display: block
 				width: 10px
 				height: 10px
-				background: $primaryColor
+				background: $primary
 				position: absolute
 				top: 0.35em
 				left: 0
 			&:last-child
 				margin-bottom: 0
 	ol
+		font-size: 1.6em
 		list-style: decimal inside
 		&:last-child
 				margin-bottom: 0
@@ -140,6 +145,10 @@ img
 		font-size: 3.2em
 		margin-bottom: 0.67em
 
+.icon
+	font-size: 10px
+
+@import 'submit-message.sass'
 
 
 
