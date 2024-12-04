@@ -1,0 +1,27 @@
+input, textarea
+  &::-webkit-input-placeholder
+    transition: all 0.4s
+    opacity: 1
+  &::-moz-placeholder
+    transition: all 0.4s
+    opacity: 1
+  &:-ms-input-placeholder
+    transition: all 0.4s
+    opacity: 1
+  &:focus
+    &::-webkit-input-placeholder
+      opacity: 0
+    &::-moz-placeholder
+      opacity: 0
+    &:-ms-input-placeholder
+      opacity: 0
+img
+  display: block
+\:root
+  scroll-behavior: auto
+body
+  min-height: 100vh
+  overflow-y: auto
+  overflow-x: hidden
+  visibility: visible
+  position: relative

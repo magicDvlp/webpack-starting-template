@@ -1,6 +1,6 @@
 # Webpack-starting-template
 
-Simple starter template for webpack web development
+Starter template for webpack web development
 
 ## Getting Started
 
@@ -12,9 +12,8 @@ Runs the app in the development mode.
 
 ### npm run build
 
-Builds the app for production to the public folder. 
+Builds the app for production to the public folder.
 
 ## Built With
 
-* [Webpack](https://github.com/webpack/webpack) - A bundler for javascript
-
+- [Webpack](https://github.com/webpack/webpack) - A bundler for javascript
