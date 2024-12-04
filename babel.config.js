@@ -1,19 +1,18 @@
-module.exports = function(api) {
+module.exports = function (api) {
   api.cache(true);
 
   const config = {
     presets: [
       [
-        '@babel/preset-env',
+        "@babel/preset-env",
         {
-          'debug': false,
-          'useBuiltIns': 'usage',
-          'corejs': '3.4.1',
+          debug: false,
+          useBuiltIns: "usage",
+          corejs: "3.38.0",
         },
       ],
-      // "@babel/preset-react"
+      ["@babel/preset-typescript"],
     ],
-    // ignore: ["/core-js/"],
   };
 
   return config;
